@@ -4,181 +4,72 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejercicio 1</title>
+    <title>Ejercicio 3</title>
 
-    <script src="js/index.js" defer></script>
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
   </head>
-
   <body>
-    <header class="header">
-      <nav class="navbar">
-        <a href="https://www.utch.edu.mx/" target="_blank" class="nav-logo"
-          >UTCH</a
-        >
-        <ul class="nav-menu">
-          <li class="nav-item">
-            <a
-              href="https://virtual.utch.edu.mx/"
-              target="_blank"
-              class="nav-link"
-              >Virtual</a
-            >
-          </li>
-          <li class="nav-item">
-            <a href="https://ti.utch.edu.mx/" target="_blank" class="nav-link"
-              >TI Virtual</a
-            >
-          </li>
-        </ul>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-      </nav>
-    </header>
+    <div id="photos" class="image-gallery"></div>
 
-    <div class="main">
-      <div style="margin-top: 4rem">
-        <h1 class="title" style="vertical-align: middle">
-          <span style="vertical-align: middle">Mi Primer Ejercicio</span>
-          <i class="fas fa-book fa-1x"></i>
-        </h1>
-      </div>
-      <h2>Carlos Daniel Garfio Murillo - 1117150109</h2>
+    <script lang="javascript" type="text/javascript" src="js/faker.js"></script>
+    <script lang="javascript" type="text/javascript" defer>
+      const photos = document.getElementById("photos");
+      faker.locale = "es_MX";
 
-      <h2>What is Lorem Ipsum?</h2>
-      <p class="large-text" align="justify">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida,
-        purus vitae convallis tempus, tellus ex pretium diam, sit amet fringilla
-        leo eros sed ex. Quisque consequat viverra lorem, sit amet malesuada
-        eros hendrerit vel. Etiam hendrerit, dolor eu pretium blandit, dui
-        ligula fringilla est, vel euismod nisi leo a enim. Mauris aliquam
-        imperdiet ligula quis pellentesque. Sed dui enim, molestie et dui a,
-        aliquam congue justo. Etiam tristique diam ullamcorper libero
-        ullamcorper faucibus. Aliquam a mauris sodales, hendrerit erat eu,
-        vestibulum massa. Curabitur ultrices ante pretium maximus tristique.
-        Curabitur lobortis augue eget mollis bibendum. Curabitur suscipit in
-        purus eu convallis. Sed at diam vestibulum, aliquam nibh fermentum,
-        porttitor justo. Ut eget urna ultrices, sagittis velit eget, efficitur
-        metus. Vestibulum nulla purus, pulvinar pharetra est ut, tincidunt
-        suscipit lacus. In hac habitasse platea dictumst. Nunc faucibus auctor
-        nisl, eget hendrerit purus. Fusce vel augue porttitor, accumsan nulla
-        ac, ultricies elit. Duis dictum leo in feugiat tempor. Ut eu ultricies
-        sapien. Ut eu diam nec mi tempor dictum in convallis ipsum. Sed commodo,
-        massa suscipit dictum porttitor, sapien odio varius lectus, dapibus
-        fringilla felis velit sollicitudin ante. In fermentum leo massa, dapibus
-        luctus metus tempus sed. Nullam non tincidunt nisl, dictum elementum
-        nunc. Sed consectetur sollicitudin sem, quis iaculis leo accumsan nec.
-        Nam vel placerat nisi. Sed varius quam in nulla rhoncus rutrum vitae vel
-        nisl. Aenean finibus, urna non euismod dapibus, leo orci iaculis nulla,
-        vitae bibendum nibh mi vel massa. Nullam sagittis dui at rhoncus varius.
-        Cras pellentesque porta lobortis. Sed porttitor urna quis tortor
-        venenatis feugiat. Duis eget orci eu libero feugiat ornare. Suspendisse
-        ut dignissim massa. Proin in urna metus. Donec pellentesque ullamcorper
-        scelerisque. Donec tincidunt elit sed erat rhoncus venenatis. Phasellus
-        scelerisque mi ac enim ornare, nec maximus quam consequat. Nunc velit
-        neque, suscipit non venenatis nec, mattis eu erat. Aliquam id volutpat
-        felis. Mauris luctus maximus vulputate. Duis viverra est quis mi
-        fermentum porttitor. In euismod odio volutpat tortor vehicula porta.
-        Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam
-        vitae magna eget quam porta pharetra quis vitae justo. Ut in dictum
-        justo. Etiam eu purus massa. Donec facilisis neque magna, ut tincidunt
-        odio mollis non. Aenean molestie, nibh bibendum egestas pulvinar, libero
-        leo feugiat urna, non ultricies augue risus in augue. Vestibulum sed
-        tincidunt tortor. Pellentesque mauris lorem, tristique ut convallis at,
-        eleifend sed magna. Cras aliquam fermentum turpis ac pretium. Nam
-        interdum, lorem nec vestibulum suscipit, orci odio hendrerit orci, vel
-        auctor magna nisi id lacus. Morbi dictum ultrices tristique. Nulla
-        facilisi. In at elit pretium, tincidunt elit quis, tempus ipsum.
-        Maecenas molestie lacinia diam venenatis lacinia. Fusce id massa in urna
-        mollis tristique sit amet non dui. Etiam laoreet nisi ex, id volutpat
-        nunc vehicula a. Integer at magna at metus condimentum tempus. Proin sit
-        amet dictum nibh. Mauris ullamcorper blandit tempus. Phasellus dolor
-        nisl, scelerisque vitae sodales non, luctus sed ipsum. Aliquam est nunc,
-        suscipit porttitor nisi a, mattis mattis eros. Suspendisse consectetur
-        ipsum elit, a faucibus augue pellentesque sed. Class aptent taciti
-        sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-        In non dignissim justo. Fusce semper lacinia metus nec varius.
-        Vestibulum dictum tortor id nisi semper, et mollis dui mattis.
-      </p>
+      function getRandomSize(min, max) {
+        return Math.round(Math.random() * (max - min) + min);
+      }
 
-      <div class="table-container">
-        <table>
-          <caption style="margin-top: 1rem">
-            <div style="vertical-align: middle">
-              <span style="vertical-align: middle">Horario</span>
-              <i class="fas fa-clock fa-sm"></i>
-            </div>
-          </caption>
-          <thead>
-            <tr>
-              <th scope="col">Hora</th>
-              <th scope="col">Lunes</th>
-              <th scope="col">Martes</th>
-              <th scope="col">Miercoles</th>
-              <th scope="col">Jueves</th>
-              <th scope="col">Viernes</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">17:00 - 18:00</th>
-              <td>ADMINISTRACIÓN DE PROYECTOS DE TI II</td>
-              <td rowspan="2">DIRECCIÓN DE EQUIPOS DE ALTO RENDIMIENTO</td>
-              <td rowspan="2">ADMINISTRACIÓN DE PROYECTOS DE TI II</td>
-              <td rowspan="2">INTEGRADORA I</td>
-              <td>OPTATIVA II ELECTRICIDAD Y ELECTRÓNICA APLICADA</td>
-            </tr>
-            <tr>
-              <th scope="row">18:00 - 19:00</th>
-              <td rowspan="2">APLICACIÓN DE LAS TELECOMUNICACIONES</td>
-              <td>INGLÉS VIII</td>
-            </tr>
-            <tr>
-              <th scope="row">19:00 - 20:00</th>
-              <td>INGLÉS VIII</td>
-              <td rowspan="2">APLICACIÓN DE LAS TELECOMUNICACIONES</td>
-              <td>DESARROLLO DE APLICACIONES WEB</td>
-              <td>ADMINISTRACIÓN DE PROYECTOS DE TI II</td>
-            </tr>
-            <tr>
-              <th scope="row">20:00 - 21:00</th>
-              <td rowspan="2">INGLÉS VIII</td>
-              <td rowspan="2">DESARROLLO DE APLICACIONES WEB</td>
-              <td rowspan="2">
-                OPTATIVA II ELECTRICIDAD Y ELECTRÓNICA APLICADA
-              </td>
-              <td>APLICACIÓN DE LAS TELECOMUNICACIONES</td>
-            </tr>
-            <tr>
-              <th scope="row">21:00 - 22:00</th>
-              <td rowspan="2">DESARROLLO DE APLICACIONES WEB</td>
-              <td>DESARROLLO DE APLICACIONES WEB</td>
-            </tr>
-            <tr>
-              <th scope="row">22:00 - 23:00</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+      function generateCard(userName, firstName, lastName, url) {
+        const container = document.createElement("div");
+        container.classList.add("image-box");
+
+        const img = document.createElement("img");
+        img.alt = userName;
+        img.src = url;
+
+        const overlay = document.createElement("div");
+        overlay.classList.add("overlay");
+
+        const details = document.createElement("div");
+        details.classList.add("details");
+
+        const h3 = document.createElement("h3");
+        h3.classList.add("title");
+        const title = document.createElement("a");
+        title.text = firstName + " " + lastName;
+        title.href = "https://www.utch.edu.mx/";
+        title.target = "_blank";
+
+        h3.appendChild(title);
+
+        const span = document.createElement("span");
+        span.classList.add("username");
+        const subTitle = document.createElement("a");
+        subTitle.text = userName;
+        span.appendChild(subTitle);
+
+        details.appendChild(h3);
+        details.appendChild(span);
+        overlay.appendChild(details);
+        container.appendChild(img);
+        container.appendChild(overlay);
+
+        return container;
+      }
+
+      for (var i = 0; i < 50; i++) {
+        const width = getRandomSize(300, 1024);
+        const height = getRandomSize(300, 1024);
+
+        const userName = faker.internet.userName();
+        const firstName = faker.name.firstName();
+        const lastName = faker.name.lastName();
+        const avatar = "http://placeimg.com/" + width + "/" + height;
+
+        const container = generateCard(userName, firstName, lastName, avatar);
+        photos.appendChild(container);
+      }
+    </script>
   </body>
 </html>
