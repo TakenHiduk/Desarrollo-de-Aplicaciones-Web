@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 3</title>
+
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+  </head>
+  <body>
+    <div id="photos" class="image-gallery"></div>
+
+    <script lang="javascript" type="text/javascript" src="js/faker.js"></script>
+    <script lang="javascript" type="text/javascript" defer>
+      const photos = document.getElementById("photos");
+      faker.locale = "es_MX";
+
+      function getRandomSize(min, max) {
+        return Math.round(Math.random() * (max - min) + min);
+      }
+
+      function generateCard(userName, firstName, lastName, url) {
+        const container = document.createElement("div");
+        container.classList.add("image-box");
+
+        const img = document.createElement("img");
+        img.alt = userName;
+        img.src = url;
+
+        const overlay = document.createElement("div");
+        overlay.classList.add("overlay");
+
+        const details = document.createElement("div");
+        details.classList.add("details");
+
+        const h3 = document.createElement("h3");
+        h3.classList.add("title");
+        const title = document.createElement("a");
+        title.text = firstName + " " + lastName;
+        title.href = "https://www.utch.edu.mx/";
+        title.target = "_blank";
+
+        h3.appendChild(title);
+
+        const span = document.createElement("span");
+        span.classList.add("username");
+        const subTitle = document.createElement("a");
+        subTitle.text = userName;
+        span.appendChild(subTitle);
+
+        details.appendChild(h3);
+        details.appendChild(span);
+        overlay.appendChild(details);
+        container.appendChild(img);
+        container.appendChild(overlay);
+
+        return container;
+      }
+
+      for (var i = 0; i < 50; i++) {
+        const width = getRandomSize(300, 1024);
+        const height = getRandomSize(300, 1024);
+
+        const userName = faker.internet.userName();
+        const firstName = faker.name.firstName();
+        const lastName = faker.name.lastName();
+        const avatar = "http://placeimg.com/" + width + "/" + height;
+
+        const container = generateCard(userName, firstName, lastName, avatar);
+        photos.appendChild(container);
+      }
+    </script>
+  </body>
+</html>
