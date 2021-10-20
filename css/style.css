@@ -1,0 +1,176 @@
+@font-face {
+  font-family: "Font Awesome";
+  src: url(../fonts/Font-Awesome/Font-Awesome-5-Free-Regular-400.otf)
+    format("otf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Font Awesome";
+  src: url(../fonts/Font-Awesome/Font-Awesome-5-Free-Solid-900.otf)
+    format("otf");
+  font-weight: bold;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #e0f7fa;
+  font-family: "Font Awesome", sans-serif;
+}
+.container {
+  width: 320px;
+  height: 480px;
+  background: #fff;
+  box-shadow: 0 10px 15px rgba(179, 179, 179, 0.7);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 8px;
+}
+
+.container h2 {
+  color: #0a66c3;
+  font-size: 1.6rem;
+}
+
+.container h2 i {
+  font-size: 1.8rem;
+  padding-left: 0.1rem;
+}
+.intro-text p {
+  font-size: 1.8rem;
+  padding-top: 0.3rem;
+}
+
+.input {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 0.7rem;
+}
+
+.input input {
+  width: 100%;
+  height: 50px;
+  padding-top: 1.1rem;
+  padding-left: 9px;
+  outline: none;
+  border: 1px solid #8c8c8c;
+  border-radius: 3px;
+  transition: 0.2s;
+}
+
+.input label {
+  position: absolute;
+  top: 30%;
+  left: 10px;
+  font-size: 1.1rem;
+  color: #8c8c8c;
+  transition: 0.2s;
+}
+
+.input input:focus ~ label,
+.input input:valid ~ label {
+  top: 10%;
+  font-size: 0.8rem;
+  color: #000;
+}
+
+.input input:focus {
+  border-width: 2px;
+  border-color: #0a66c3;
+}
+
+fieldset legend {
+  background-color: #000;
+  color: #fff;
+  padding: 3px 6px;
+}
+
+fieldset legend output {
+  font: 1rem "Fira Sans", sans-serif;
+}
+
+fieldset legend input {
+  margin: 0.4rem;
+}
+
+.forgot-pass-link {
+  width: 140px;
+  padding: 0.2rem;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bolder;
+  color: #0a66c3;
+  transition: 0.3s;
+  border-radius: 12px;
+}
+
+.forgot-pass-link:hover {
+  background: rgba(10, 102, 195, 0.3);
+}
+
+button {
+  height: 50px;
+  background: #0a66c3;
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.join-link {
+  text-align: center;
+}
+
+.join-link a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: #0a66c3;
+}
+
+@media (min-width: 768px) {
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercico 5</title>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body
+    style="
+      background: rgb(2, 0, 36);
+      background: linear-gradient(
+        90deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(9, 121, 35, 1) 0%,
+        rgba(0, 212, 255, 1) 100%
+      );
+      border-radius: 1rem;
+    "
+  >
+    <form id="login-form" name="login-form" class="container">
+      <h2>
+        NotLinked<span
+          ><i class="fa fa-linkedin-square" aria-hidden="true"></i
+        ></span>
+      </h2>
+      <div class="intro-text">
+        <h1>Iniciar sesion</h1>
+        <p>Bienvenido de vuelta!</p>
+      </div>
+      <div>
+        <div class="input">
+          <input type="text" name="email" id="email" />
+          <label for="email"> Email </label>
+        </div>
+        <div class="input">
+          <input type="password" name="password" id="password" />
+          <label for="password"> Password </label>
+        </div>
+        <fieldset id="language" name="language">
+          <legend>Escoge tu lenguaje favorito</legend>
+
+          <input type="radio" id="java" name="language" value="java" />
+          <label for="java">Java</label>
+          <input type="radio" id="csharp" name="language" value="csharp" />
+          <label for="csharp">CSharp</label>
+          <input type="radio" id="python" name="language" value="python" />
+          <label for="python">Python</label>
+        </fieldset>
+      </div>
+      <a href="#" class="forgot-pass-link">Forgot password?</a>
+      <button>Sign in</button>
+      <p class="join-link">New to NotLinked? <a href="#">Join now</a></p>
+    </form>
+
+    <script defer>
+      var form = document.getElementById("login-form");
+      function handleForm(e) {
+        e.preventDefault();
+        const email = document.getElementById("email");
+        const password = document.getElementById("password");
+        // const preferedLanguage = document.getElementById("language").value;
+
+        let msg = `Hola ${email.value}! Tu contraseña es: 🙈 ${password.value} 🙈\r\n`;
+
+        // var preferedLanguage = language?.value;
+        // console.log(preferedLanguage);
+        // if (!preferedLanguage) msg += `Awww No tienes lenguaje favorito 😢`;
+        // else msg += `Yey! Tu lenguaje favorito es: ${preferedLanguage}`;
+
+        alert(msg);
+      }
+      form.addEventListener("submit", handleForm);
+    </script>
+  </body>
+</html>
