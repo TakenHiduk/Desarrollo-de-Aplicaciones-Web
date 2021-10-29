@@ -27,7 +27,7 @@ h1 {
   margin: 0 auto;
 }
 
-.tres-columnas {
+.dos-columnas {
   display: flex;
 }
 
@@ -47,14 +47,14 @@ h1 {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  .tresD-columnas {
+  .dos-columnas {
     justify-content: space-between;
     flex-direction: row;
   }
 
   .articulo {
     flex-basis: calc(50% - 0.75rem);
-    flex: 0 0 calc(33.3% - 0.75rem);
+    flex: 0 0 calc(50% - 0.75rem);
   }
 }
 
