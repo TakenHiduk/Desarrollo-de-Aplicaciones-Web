@@ -22,13 +22,12 @@ h1 {
 }
 
 .contenedor {
-  max-width: 1200px;
   width: 95%;
   margin: 0 auto;
 }
 
-.dos-columnas {
-  display: flex;
+.contenedor-grid {
+  display: grid;
 }
 
 .articulo {
@@ -47,19 +46,28 @@ h1 {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  .tresD-columnas {
-    justify-content: space-between;
-    flex-direction: row;
-  }
-
-  .articulo {
-    flex-basis: calc(50% - 0.75rem);
-    flex: 0 0 calc(50% - 0.75rem);
-  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  .contenedor-grid {
+    grid-template-columns: 250px, 1fr, 250px;
+    grid-template-areas: "izquierda contenido derecha";
+    grid-auto-flow: column;
+    column-gap: 2rem;
+  }
+
+  main {
+    grid-area: contenido;
+  }
+
+  .asidebar1 {
+    grid-area: izquierda;
+  }
+
+  .asidebar2 {
+    grid-area: derecha;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
