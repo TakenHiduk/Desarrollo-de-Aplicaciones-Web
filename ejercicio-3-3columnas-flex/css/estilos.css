@@ -22,14 +22,15 @@ h1 {
 }
 
 .contenedor {
-  max-width: 1200px;
   width: 95%;
   margin: 0 auto;
 }
 
-.tres-columnas {
+.contenedor-flex {
   display: flex;
-  gap: 2rem;
+}
+
+.side {
 }
 
 .articulo {
@@ -48,19 +49,28 @@ h1 {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  .dos-columnas {
-    justify-content: space-between;
-    flex-direction: row;
-  }
-
-  .articulo {
-    flex-basis: calc(50% - 0.75rem);
-    flex: 0 0 calc(33.3% - 0.75rem);
-  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  .contenedor-flex {
+    justify-content: space-between;
+  }
+
+  .side {
+    flex-basis: calc(20% - 2rem);
+  }
+
+  main {
+    flex-basis: calc(60% -2rem);
+  }
+
+  .asidebar1 {
+    order: -1;
+  }
+
+  .asidebar2 {
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
