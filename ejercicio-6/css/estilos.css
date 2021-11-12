@@ -27,7 +27,7 @@ h1 {
   margin: 0 auto;
 }
 
-.articulo {
+article {
   display: inline-block;
   background-color: #9cb3ca;
   color: #ffffff;
@@ -37,8 +37,15 @@ h1 {
   text-transform: uppercase;
 }
 
-.con-sidebar {
+.layout-shifter {
   display: grid;
+  gap: 2rem;
+}
+
+main {
+  grid-area: contenido;
+  display: grid;
+  gap: 2rem;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -51,23 +58,35 @@ h1 {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  .con-side {
-    grid-template-columns: 1fr 3fr;
-    column-gap: 4rem;
-    grid-auto-flow: column;
+  .layout-shifter {
+    grid-template-areas:
+      "contenido"
+      "inferior";
   }
 
   aside {
-    grid-column: 1/2;
-    grid-row: 1/2;
+    grid-area: inferior;
   }
-  article {
-    grid-column: 2/3;
+
+  main {
+    grid-template-areas: "entrada1 entrada2";
   }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  .layout-shifter {
+    grid-template-areas: "contenido sidebar";
+  }
+
+  aside {
+    grid-area: sidebar;
+  }
+
+  main {
+    grid-template-areas: "entrada1 entrada2";
+    grid-template-columns: unset;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
